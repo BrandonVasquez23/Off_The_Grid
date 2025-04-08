@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,9 +43,7 @@
 
     </style>
 </head>
-
 <body>
-
     <div class="grid-container">
         <div>A</div>
         <div>radiant</div>
@@ -64,8 +61,16 @@
     </div>
 
 <script>
-    document.body.style.transform = `rotate(90deg)`;
-</script>
+ //   document.body.style.transform = `rotate(90deg)`;
 
+ let rotation = 0;
+     document.addEventListener("click", function () {
+       let min = 1;
+       let max = 20;
+       rotation += Math.random() * (max - min) + min;
+       document.body.style.transform = `rotate(${rotation}deg)`;
+     });
+
+</script>
 </body>
 </html>
